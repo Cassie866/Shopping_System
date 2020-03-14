@@ -295,7 +295,18 @@ void Buyer::InquireOrder()
 //买家取消订单 
 void Buyer::ModifyOrder()
 {
-	InquireOrder();
+	if (_myOrder.size() == 0)
+	{
+		cout << "您什么都没有买！" << endl;
+		return;
+	}
+	cout << "这是您购买的商品 :" << endl;
+	cout << setw(10) << "商品编号" << setw(10) << "商品名称" << setw(10) << "商品价格" << setw(10) << "购买数量" << setw(10) << "客户姓名" << setw(15) << "联系电话" << setw(15) << "地址";
+	cout << setw(15) << "日期" << endl;
+	for (int i = 0; i < _myOrder.size(); ++i)
+	{
+		_myOrder[i].Print();
+	}
 	cout << "1.继续" << setw(20) << "2.返回" << endl;
 	string str;
 	while (cin >> str)
