@@ -96,6 +96,7 @@ void Seller::CancelCom(vector<Commodity>& list)
 			{
 				list.erase(it + i);
 				cout << "商品下架成功！" << endl;
+				cout << "是否继续下架商品? Y/N" << endl;
 				break;
 			}
 		}
