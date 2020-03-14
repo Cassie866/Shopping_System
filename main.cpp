@@ -98,7 +98,7 @@ void SeviceForSeller()
 	}
 	cout << setw(30) << "1. 增加商品" << setw(20) << "2. 下架商品" << endl;
 	cout << setw(30) << "3. 查询订单" << setw(20) << "4.设置密码" << endl;
-	cout<<setw(50) << "5.返回主菜单" << endl;
+	cout<<setw(30) << "5.返回主菜单" << endl;
 	cout << "请输入您要进行的操作：";
 	int choice;
 	while (cin >> choice)
@@ -111,7 +111,7 @@ void SeviceForSeller()
 		{
 			cout << setw(30) << "1. 增加商品" << setw(20) << "2. 下架商品" << endl;
 			cout << setw(30) << "3. 查询订单" << setw(20) << "4.设置密码" << endl;
-			cout << setw(50) << "5.返回主菜单" << endl;
+			cout << setw(30) << "5.返回主菜单" << endl;
 			cout << "请输入您要进行的操作：";
 			continue;
 		}
@@ -180,7 +180,7 @@ void SeviceForSeller()
 			{
 				cout << setw(30) << "1. 增加商品" << setw(20) << "2. 下架商品" << endl;
 				cout << setw(30) << "3. 查询订单" << setw(20) << "4.设置密码" << endl;
-				cout << setw(50) << "5.返回主菜单" << endl;
+				cout << setw(30) << "5.返回主菜单" << endl;
 				cout << "请输入您要进行的操作：";
 				continue;
 			}
@@ -209,7 +209,7 @@ void SeviceForSeller()
 		}
 		cout << setw(30) << "1. 增加商品" << setw(20) << "2. 下架商品" << endl;
 		cout << setw(30) << "3. 查询订单" << setw(20) << "4.设置密码" << endl;
-		cout << setw(50) << "5.返回主菜单" << endl;
+		cout << setw(30) << "5.返回主菜单" << endl;
 		cout << "请输入您要进行的操作：";
 	}
 }
@@ -222,7 +222,7 @@ void SeviceForBuyer()
 	Buyer ibuyer;
 	Commodity iMenu;
 	Order iOrder;
-	cout << setw(20) << "1. 点菜" << setw(20) << "2.查询订单" << endl;
+	cout << setw(20) << "1. 购买商品" << setw(20) << "2.查询订单" << endl;
 	cout << setw(20) << "3. 修改订单" << setw(20) << "4.返回主菜单 " << endl;
 	cout << "请输入要进行的操作：";
 	int n;
@@ -273,7 +273,7 @@ void SeviceForBuyer()
 			ibuyer.InquireOrder();
 		else if (n == 3)
 			ibuyer.ModifyOrder();
-		cout << setw(20) << "1. 点菜" << setw(20) << "2.查询订单" << endl;
+		cout << setw(20) << "1. 购买商品" << setw(20) << "2.查询订单" << endl;
 		cout << setw(20) << "3. 修改订单" << setw(20) << "4.返回主菜单 " << endl;
 		cout << "请输入要进行的操作：";
 	}
