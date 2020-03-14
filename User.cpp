@@ -20,14 +20,14 @@ void Seller::AppendCom(vector<Commodity>& list)
 {
 	int oldsize = list.size();
 	cout << "添加新商品?  Y/N" << endl;
-	char ch;
+	string ch;
 	while (cin >> ch)
 	{
-		if (ch == 'N' || ch == 'n')
+		if (ch == "N" || ch == "n")
 		{
 			break;
 		}
-		if (ch != 'Y' && ch != 'y')
+		if (ch != "Y" && ch != "y")
 		{
 			cout << "输入错误，请重新输入：" << endl;
 			continue;
@@ -67,14 +67,14 @@ void Seller::AppendCom(vector<Commodity>& list)
 void Seller::CancelCom(vector<Commodity>& list)
 {
 	cout << "下架商品? Y/N" << endl;
-	char ch;
+	string ch;
 	vector<Commodity>::iterator it = list.begin();
 	while (cin >> ch)
 	{
 		it = list.begin();
-		if (ch == 'N' || ch == 'n')
+		if (ch == "N" || ch == "n")
 			break;
-		if (ch != 'Y' && ch != 'y')
+		if (ch != "Y" && ch != "y")
 		{
 			cout << "输入错误，请重新输入!" << endl;
 			continue;
