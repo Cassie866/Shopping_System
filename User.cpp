@@ -166,7 +166,6 @@ string Buyer::GetName()
 	return _name;
 }
 
-
 void Buyer::BookOrder(vector<Commodity>& list)
 {
 	int oldsize = _myOrder.size();
@@ -346,7 +345,7 @@ void Buyer::ModifyOrder()
 	inout.open("order.txt", ios::out);
 	if (inout.fail())
 	{
-		cout << endl << "The system can't find the file!" << endl;
+		cout << "The system can't find the file!" << endl;
 		return;
 	}
 	for (int i = 0; i < _myOrder.size(); ++i)
