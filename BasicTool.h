@@ -1,5 +1,4 @@
 #pragma once
-#pragma once
 #include <iostream>
 #include <iomanip>
 #include <string>
@@ -9,7 +8,7 @@ using namespace std;
 class Date
 {
 public:
-	Date(int year = 2020, int month = 3, int day = 1, int hour = 8);
+	Date(int year = 2018, int month = 3, int day = 5, int hour = 18);
 	int GetYear();
 	int GetMonth();
 	int GetDay();
@@ -22,7 +21,6 @@ public:
 private:
 	int _year, _month, _day, _hour;
 };
-
 
 
 class Commodity
@@ -42,8 +40,6 @@ protected:
 };
 
 
-
-
 class Order :public Commodity
 {
 public:
@@ -55,7 +51,6 @@ public:
 	string GetAdress();
 	string GetPhone();
 	Date GetSendDate();
-	bool GetState();
 	int GetNum();
 	bool SetCustomerName(string customerName);
 	bool SetAdress(string adress);
@@ -68,5 +63,4 @@ private:
 	string _customerName, _adress, _phone;
 	int _num;
 	Date _sendDate;
-	bool _state;
 };
