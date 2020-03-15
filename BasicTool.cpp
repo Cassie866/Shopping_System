@@ -57,8 +57,6 @@ void Date::Print()
 
 
 
-
-
 Commodity::Commodity(string name, string id, double price)
 	:_comName(name), _comID(id), _comPrice(price)
 {}
@@ -101,13 +99,8 @@ void Commodity::Print()
 
 
 
-
-
-
-
 Order::Order()
 {
-	_state = true;
 	_num = 0;
 }
 
@@ -117,22 +110,18 @@ Order::Order(string comName, string comID, double comPrice, string customerName,
 	_customerName = customerName;
 	_adress = adress;
 	_phone = phone;
-	_state = true;
 	_num = 0;
 }
 
 Order::Order(string comName, string comID, double comPrice)
 	: Commodity(comName, comID, comPrice)
 {
-	_state = true;
 	_num = 0;
 }
 
 Order::Order(Commodity m, int n)
 	: Commodity(m), _num(n)
-{
-	_state = true;
-}
+{}
 
 
 string Order::GetCustomerName()
@@ -155,11 +144,6 @@ Date Order::GetSendDate()
 	return _sendDate;
 }
 
-bool Order::GetState()
-{
-	return _state;
-}
-
 int Order::GetNum()
 {
 	return _num;
@@ -167,55 +151,30 @@ int Order::GetNum()
 
 bool Order::SetCustomerName(string customerName)
 {
-	if (!_state)
-	{
-		return false;
-	}
 	_customerName = customerName;
-	return true;
 }
 
 bool Order::SetAdress(string adress)
 {
-	if (!_state)
-	{
-		return false;
-	}
 	_adress = adress;
 	return true;
 }
 
 bool Order::SetPhone(string phone)
 {
-	if (!_state)
-	{
-		return false;
-	}
 	_phone = phone;
 	return true;
 }
 
-void Order::SetState()
-{
-	_state = false;
-}
 
 bool Order::SetSendDate(Date sendDate)
 {
-	if (!_state)
-	{
-		return false;
-	}
 	_sendDate = sendDate;
 	return true;
 }
 
 bool Order::SetNum(int num)
 {
-	if (_state)
-	{
-		return false;
-	}
 	_num = num;
 	return true;
 }
