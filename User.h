@@ -1,9 +1,6 @@
 #pragma once
-#pragma once
 #include "BasicTool.h"
 #include <vector>
-
-
 
 class Seller 
 {
@@ -19,8 +16,6 @@ private:
 };
 
 
-
-
 class Buyer
 {
 public:
@@ -34,6 +29,3 @@ private:
 	string _name, _adress, _phone;
 	Date _sendDate;
 };
-
-
-
