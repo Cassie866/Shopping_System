@@ -93,7 +93,7 @@ void SeviceForSeller()
 	}
 	if (num <= 0)
 	{
-		cout << endl << "你已经错误输入5次！" << endl;
+		cout  << "您已经错误输入5次密码！" << endl;
 		return;
 	}
 	cout << setw(30) << "1. 增加商品" << setw(20) << "2. 下架商品" << endl;
@@ -120,7 +120,7 @@ void SeviceForSeller()
 		finout.open("order.txt", ios::in);
 		if (finout.fail())
 		{
-			cout << endl << "The system can't find the file!" << endl;
+			cout  << "The system can't find the file!" << endl;
 			break;
 		}
 		while (!finout.eof())
@@ -134,7 +134,7 @@ void SeviceForSeller()
 		finout.open("List.txt", ios::in);
 		if (finout.fail())
 		{
-			cout << endl << "The system can't find the file!" << endl;
+			cout  << "The system can't find the file!" << endl;
 			break;
 		}
 		while (!finout.eof())
@@ -172,7 +172,7 @@ void SeviceForSeller()
 					break;
 				else
 				{
-					cout << endl << "密码错误！" << endl;
+					cout << "密码错误！" << endl;
 					cout << "1.继续" << setw(20) << "2.返回" << endl;
 				}
 			}
@@ -186,7 +186,7 @@ void SeviceForSeller()
 			}
 			cout  << "请输入您的新密码: ";
 			cin >> str1;
-			cout << endl << "再次输入您的新密码 :";
+			cout  << "再次输入您的新密码 :";
 			cin >> str2;
 		
 			if (str1 == str2)
@@ -194,7 +194,7 @@ void SeviceForSeller()
 				finout.open("password.txt", ios::out);
 				if (finout.fail())
 				{
-					cout << endl << "The system can't find the file!" << endl;
+					cout  << "The system can't find the file!" << endl;
 					return;
 				}
 				finout << str1;
